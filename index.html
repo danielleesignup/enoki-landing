@@ -5,147 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enoki | LLM Truth Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <meta name="description" content="Verify your LLM outputs with confidence. Catch hallucinations, ensure compliance, and ship trustworthy AI faster."/>
+    <meta
+      name="description"
+      content="Verify your LLM outputs with confidence. Catch hallucinations, ensure compliance, and ship trustworthy AI faster."
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .glass {
+        backdrop-filter: blur(12px);
+        background: rgba(255, 255, 255, 0.1);
+      }
+    </style>
   </head>
 
-  <body class="antialiased text-gray-800 bg-gradient-to-b from-white to-gray-50">
+  <body class="antialiased text-gray-100 bg-gradient-to-br from-blue-600 via-indigo-600 to-blue-900 min-h-screen">
+    <!-- NAV -->
+    <header class="absolute top-0 left-0 w-full flex items-center justify-between px-8 py-6">
+      <div class="flex items-center space-x-3">
+        <img src="./icon.svg" alt="Enoki Logo" class="w-8 h-8" />
+        <span class="text-xl font-semibold tracking-wide">Enoki</span>
+      </div>
+    </header>
+
     <!-- HERO -->
-    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
-        Know when your model is right — before your users find out it’s wrong.
+    <section class="flex flex-col justify-center items-center text-center px-6 pt-32 pb-24">
+      <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+        Know when your model is right —<br class="hidden md:block" />
+        before your users find out it’s wrong.
       </h1>
-      <p class="max-w-2xl text-lg md:text-xl text-gray-600 mb-8">
-        Enoki’s LLM Truth Studio verifies factual accuracy across models and prompts,
+      <p class="max-w-2xl text-lg md:text-xl text-gray-200 mb-10">
+        <span class="font-semibold text-white">LLM Truth Studio</span> by Enoki verifies factual accuracy across models and prompts —
         helping teams catch hallucinations, ensure compliance, and ship trustworthy AI faster.
       </p>
       <a
-        href="https://forms.gle/sTkEiXC8tLodgrBBA"
+        href="https://forms.gle/YOUR_FORM_ID"
         target="_blank"
-        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold shadow-lg transition-all"
+        class="bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-400 hover:to-indigo-400 text-white font-semibold py-3 px-8 rounded-xl shadow-lg transition-all"
       >
-        🔍 Verify My Model — Early Access
+        🔍 Get Early Access
       </a>
     </section>
 
     <!-- PROBLEM -->
-    <section class="bg-blue-50 py-20 px-6 text-center">
-      <div class="max-w-3xl mx-auto space-y-4">
-        <p class="text-xl font-medium text-gray-700">
+    <section class="glass py-24 px-6 text-center rounded-t-3xl">
+      <div class="max-w-3xl mx-auto space-y-5">
+        <p class="text-2xl font-medium">
           LLMs are powerful — but dangerously confident.
         </p>
-        <p class="text-gray-600">
-          A single model update or prompt tweak can make them <em>fill in the blanks</em> —
-          confidently inventing facts that aren’t real.
+        <p class="text-gray-200">
+          A single model update or prompt tweak can make them <em>fill in the blanks</em> — confidently inventing facts that aren’t real.
         </p>
-        <p class="text-gray-600">
+        <p class="text-gray-300">
           Teams waste hours manually reviewing outputs, yet can’t answer the one question that matters:
         </p>
-        <h3 class="text-2xl font-semibold text-gray-800">
+        <h3 class="text-3xl font-semibold text-white mt-4">
           “Can we trust what our model just said?”
         </h3>
-        <p class="text-gray-600">
+        <p class="text-gray-300">
           Meanwhile, compliance teams and clients demand proof that outputs are reliable — not just impressive.
         </p>
       </div>
     </section>
 
     <!-- HOW IT WORKS -->
-    <section class="py-20 px-6 max-w-5xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-12">How It Works</h2>
-
-      <div class="grid md:grid-cols-3 gap-10 text-center">
-        <div class="p-6 bg-white rounded-2xl shadow">
-          <h3 class="text-xl font-semibold mb-2">1️⃣ Upload & Replay</h3>
-          <p class="text-gray-600">
-            Upload your prompts or test cases once. Enoki replays them automatically across model
-            versions — giving you reproducible, parameter-controlled comparisons.
+    <section class="py-24 px-6 max-w-5xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-14 text-white">How LLM Truth Studio Works</h2>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="glass rounded-2xl p-8 shadow-lg hover:scale-[1.02] transition-all">
+          <h3 class="text-xl font-semibold mb-3">1️⃣ Upload & Replay</h3>
+          <p class="text-gray-200">
+            Upload your prompts or test cases once. Truth Studio replays them automatically across model versions — giving you reproducible, parameter-controlled comparisons.
           </p>
         </div>
-
-        <div class="p-6 bg-white rounded-2xl shadow">
-          <h3 class="text-xl font-semibold mb-2">2️⃣ Detect & Flag</h3>
-          <p class="text-gray-600">
-            Our evaluator identifies hallucinations, unsupported claims, and behavioral drift using rule-based
-            checks and LLM-as-judge scoring — no manual review required.
+        <div class="glass rounded-2xl p-8 shadow-lg hover:scale-[1.02] transition-all">
+          <h3 class="text-xl font-semibold mb-3">2️⃣ Detect & Flag</h3>
+          <p class="text-gray-200">
+            The evaluator identifies hallucinations, unsupported claims, and behavioral drift using rule-based checks and LLM-as-judge scoring — no manual review required.
           </p>
         </div>
-
-        <div class="p-6 bg-white rounded-2xl shadow">
-          <h3 class="text-xl font-semibold mb-2">3️⃣ Score & Track</h3>
-          <p class="text-gray-600">
-            Every run produces a Truth Score measuring factual accuracy and consistency.
-            Track trends, compare models, and share reports with your team or compliance lead.
+        <div class="glass rounded-2xl p-8 shadow-lg hover:scale-[1.02] transition-all">
+          <h3 class="text-xl font-semibold mb-3">3️⃣ Score & Track</h3>
+          <p class="text-gray-200">
+            Each run produces a Truth Score measuring factual accuracy and consistency. Track trends, compare models, and share reports with your compliance team.
           </p>
         </div>
-      </div>
-    </section>
-
-    <!-- MONITOR -->
-    <section class="bg-gray-100 py-20 px-6 text-center">
-      <h2 class="text-3xl font-bold mb-4">
-        From overview to insight — see where and why your model fails.
-      </h2>
-      <p class="max-w-3xl mx-auto text-gray-600">
-        Track every evaluation run by model, engineer, and prompt.
-        See which outputs fail, why they were flagged, and how fixes improve your Truth Score.
-        No more guessing which model change caused a new hallucination.
-      </p>
-    </section>
-
-    <!-- COMPARISON TABLE -->
-    <section class="py-20 px-6">
-      <h2 class="text-3xl font-bold text-center mb-10">Why Teams Choose Enoki</h2>
-      <div class="overflow-x-auto max-w-5xl mx-auto">
-        <table class="w-full text-left border-collapse">
-          <thead>
-            <tr class="bg-gray-200">
-              <th class="p-3">Challenge</th>
-              <th class="p-3">Without Enoki</th>
-              <th class="p-3">With Enoki</th>
-            </tr>
-          </thead>
-          <tbody class="bg-white divide-y">
-            <tr>
-              <td class="p-3 font-semibold">Pre-deployment testing</td>
-              <td class="p-3 text-gray-600">Manual, inconsistent, unreproducible</td>
-              <td class="p-3 text-gray-800">Automated replay across models & parameters</td>
-            </tr>
-            <tr>
-              <td class="p-3 font-semibold">Detecting hallucinations</td>
-              <td class="p-3 text-gray-600">Caught only after user reports</td>
-              <td class="p-3 text-gray-800">Flagged before production</td>
-            </tr>
-            <tr>
-              <td class="p-3 font-semibold">Compliance & transparency</td>
-              <td class="p-3 text-gray-600">Ad-hoc screenshots, no paper trail</td>
-              <td class="p-3 text-gray-800">Exportable truth reports for stakeholders</td>
-            </tr>
-            <tr>
-              <td class="p-3 font-semibold">Cross-model evaluation</td>
-              <td class="p-3 text-gray-600">Vendor-locked or SDK-tied</td>
-              <td class="p-3 text-gray-800">Vendor-neutral verification layer</td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="py-20 text-center">
-      <h2 class="text-3xl font-bold mb-6">For engineers who build with integrity.</h2>
-      <p class="text-gray-600 mb-8">
+    <section class="text-center py-24 px-6">
+      <h2 class="text-4xl font-bold mb-6 text-white">For engineers who build with integrity.</h2>
+      <p class="text-gray-200 mb-10">
         Stop guessing. Start verifying.
       </p>
       <a
         href="https://forms.gle/YOUR_FORM_ID"
         target="_blank"
-        class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg transition-all"
+        class="bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-400 hover:to-indigo-400 text-white font-semibold py-4 px-10 rounded-xl shadow-lg transition-all"
       >
-        🔍 Get Early Access
+        🔍 Verify My Model — Early Access
       </a>
-      <p class="text-sm text-gray-400 mt-6">
+      <p class="text-sm text-gray-400 mt-8">
         Built for AI teams working in regulated, high-stakes environments — where truth matters as much as innovation.
       </p>
     </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center text-gray-400 py-10 border-t border-white/10 text-sm">
+      © 2025 Enoki. All rights reserved.
+    </footer>
   </body>
 </html>
