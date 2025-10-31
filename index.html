@@ -17,6 +17,11 @@
         backdrop-filter: blur(12px);
         background: rgba(255, 255, 255, 0.1);
       }
+      .gradient-text {
+        background: linear-gradient(to right, #60a5fa, #4f46e5);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     </style>
   </head>
 
@@ -24,7 +29,7 @@
     <!-- NAV -->
     <header class="absolute top-0 left-0 w-full flex items-center justify-between px-8 py-6">
       <div class="flex items-center space-x-3">
-        <img src="./icon.svg" alt="Enoki Logo" class="w-8 h-8" />
+        <img src="assets/icon.svg" alt="Enoki Logo" class="w-8 h-8" />
         <span class="text-xl font-semibold tracking-wide">Enoki</span>
       </div>
     </header>
@@ -71,7 +76,9 @@
 
     <!-- HOW IT WORKS -->
     <section class="py-24 px-6 max-w-5xl mx-auto text-center">
-      <h2 class="text-4xl font-bold mb-14 text-white">How LLM Truth Studio Works</h2>
+      <h2 class="text-4xl font-bold mb-14 text-white">
+        How <span class="gradient-text">LLM Truth Studio</span> Works
+      </h2>
       <div class="grid md:grid-cols-3 gap-10">
         <div class="glass rounded-2xl p-8 shadow-lg hover:scale-[1.02] transition-all">
           <h3 class="text-xl font-semibold mb-3">1️⃣ Upload & Replay</h3>
@@ -94,14 +101,28 @@
       </div>
     </section>
 
+    <!-- PRODUCT PREVIEW -->
+    <section class="bg-gray-50 text-gray-800 py-24 px-6">
+      <div class="max-w-6xl mx-auto text-center space-y-6">
+        <h2 class="text-4xl font-bold mb-4">
+          Explore the <span class="gradient-text">LLM Truth Studio</span> Dashboard
+        </h2>
+        <p class="text-lg text-gray-600 mb-12">
+          From evaluation trends to flag analytics, Enoki gives you visibility into every model decision.
+        </p>
+        <img src="assets/dashboard.png" alt="Dashboard Preview" class="rounded-2xl shadow-xl mx-auto mb-12" />
+        <img src="assets/run-list.png" alt="Evaluation Run List" class="rounded-2xl shadow-xl mx-auto" />
+      </div>
+    </section>
+
     <!-- CTA -->
-    <section class="text-center py-24 px-6">
+    <section class="text-center py-24 px-6 bg-gradient-to-br from-indigo-700 via-blue-700 to-indigo-900">
       <h2 class="text-4xl font-bold mb-6 text-white">For engineers who build with integrity.</h2>
-      <p class="text-gray-200 mb-10">
-        Stop guessing. Start verifying.
+      <p class="text-gray-200 mb-10 max-w-xl mx-auto">
+        Stop guessing. Start verifying. Join our early access and help define the future of AI reliability.
       </p>
       <a
-        href="https://forms.gle/YOUR_FORM_ID"
+        href="https://forms.gle/5Yz7MsotUkUx8xnd6"
         target="_blank"
         class="bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-400 hover:to-indigo-400 text-white font-semibold py-4 px-10 rounded-xl shadow-lg transition-all"
       >
@@ -113,7 +134,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="text-center text-gray-400 py-10 border-t border-white/10 text-sm">
+    <footer class="text-center text-gray-400 py-10 border-t border-white/10 text-sm bg-indigo-950">
       © 2025 Enoki. All rights reserved.
     </footer>
   </body>
