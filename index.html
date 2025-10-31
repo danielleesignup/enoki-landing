@@ -13,14 +13,20 @@
       html {
         scroll-behavior: smooth;
       }
+
+      h2, h3, h1 {
+        line-height: 1.2;
+        overflow: visible;
+      }
       .glass {
         backdrop-filter: blur(12px);
         background: rgba(255, 255, 255, 0.1);
       }
       .gradient-text {
-        background: linear-gradient(to right, #60a5fa, #4f46e5);
+        background: linear-gradient(to right, #3b82f6, #1e40af);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        color: #1e40af; /* fallback */
       }
     </style>
   </head>
